@@ -1,16 +1,55 @@
-# TicTacToe AI — Minimax
+# Tic-Tac-Toe AI (Minimax - Java)
 
-Konsol üzerinden oynanan, yenilmesi imkansız bir tic-tac-toe (XOX) oyunu. Yapay zeka, **Minimax algoritması** ile oynar; en iyi sonuç alabileceğin senaryo beraberliktir.
+Bu proje, yapay zekâ rakibine karşı oynanan basit bir Tic-Tac-Toe (XOX) oyunudur.  
+Yapay zekâ kısmında Minimax algoritması kullanılmıştır.
 
-## Hakkında
+---
 
-Bu proje benim sıfırdan yazdığım bir kod değildir. Bir **LLM (Large Language Model)** tarafından üretilmiştir. Kodu kendi makinemde derleyip çalıştırdım, akışını ve mantığını inceledim. Amacım kodu ezbere yazmak değil, **Minimax algoritmasının nasıl çalıştığını anlamak** ve yapay zekanın karar verme mantığını incelemekti.
+## Proje Hakkında
 
-Başkalarının da kodu okuyup öğrenmesi için repoya ekliyorum.
+- Oyun Java dili ile geliştirilmiştir.
+- Yapay zekâ, Minimax algoritması sayesinde optimal hamle yapar.
+- Oyun terminal/console üzerinden çalışır.
+- İki taraf da hatasız oynarsa oyun berabere biter.
 
-## Nasıl çalışır?
+---
 
-İki oyuncu sırayla oynar: kullanıcı **X**, bilgisayar **O**. Tahta 0–8 arası numaralandırılmış 9 hücreden oluşur:
+## Yapay Zekâ Mantığı
+
+Yapay zekâ, olası tüm hamleleri değerlendirir ve gelecekte oluşabilecek oyun durumlarını hesaplayarak en iyi hamleyi seçer.
+
+Bu projede özellikle:
+- Minimax algoritması
+- Recursive düşünme mantığı
+- Oyun ağacı (game tree) yapısı
+
+konularını anlamaya odaklandım.
+
+---
+
+## Not
+
+Bu proje, ChatGPT desteğiyle geliştirilmiştir.  
+Kodun mantığını inceleyip anlamaya çalıştım; özellikle Minimax algoritması ve recursive yapı üzerine öğrenme amaçlı çalıştım.
+
+---
+
+## Bu Projede Öğrendiklerim
+
+- Minimax algoritması
+- Recursive fonksiyon mantığı
+- Basit yapay zekâ karar mekanizması
+- Oyun mantığı oluşturma
+- Java'da console tabanlı proje geliştirme
+
+---
+
+## Gelecekte Eklemeyi Düşündüklerim
+
+- Grafik arayüz (GUI)
+- Zorluk seviyeleri
+- Daha gelişmiş AI davranışları
+- Unity’ye taşıma denemeleri
 
 ```
 0 | 1 | 2
@@ -31,9 +70,7 @@ Bilgisayar her sırasında **Minimax** ile tahtadaki tüm olası hamleleri tarar
 
 Sonuç: AI asla kaybetmez. En iyi yapabileceğin beraberlik.
 
-## Çalıştırma
 
-Java 8 veya üzeri yeterli.
 
 ```bash
 javac TicTacToeAI.java
@@ -53,12 +90,10 @@ Hamle yaparken 0–8 arası bir numara gir.
 | `bestMove()` | Tüm boş hücreleri deneyip en iyi skorlu hamleyi seçer |
 | `main()` | Oyun döngüsü, kullanıcı girişi ve oyun sonu kontrolü |
 
-## Notlar
+## Not
 
 - Kullanıcı geçersiz bir hücre (dolu olan) seçerse program tekrar sorar.
 - Klasör adında Türkçe karakter olması Windows + Java kombinasyonunda sorun çıkarabilir; ASCII karakterli bir yol kullanmak daha güvenli.
 - Geliştirme fikirleri: alpha-beta budama (büyük tahtalar için), GUI versiyonu, zorluk seviyesi (rastgele hamle yüzdesi).
 
-## Lisans
 
-Eğitim amaçlı, serbestçe kullanılabilir.
